@@ -11,14 +11,17 @@ source:
   sha256: 808c41542fffdf5ead6e74a291b4294191adc78d03fc53b945bf7c5ece299d27
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools >=45
+    - setuptools_scm >=3.4
+    - toml
   run:
     - importlib-metadata
     - packaging
@@ -30,6 +33,7 @@ test:
     - sphinx_autosummary_accessors
   commands:
     - pip check
+    - python -c 'from sphinx_autosummary_accessors import __version__; assert __version__ != "0.0.0"'
   requires:
     - pip
 
