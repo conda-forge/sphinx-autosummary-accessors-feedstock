@@ -40,6 +40,7 @@ Installing `sphinx-autosummary-accessors` from the `conda-forge` channel can be 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `sphinx-autosummary-accessors` can be installed with:
