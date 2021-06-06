@@ -1,5 +1,5 @@
 {% set name = "sphinx-autosummary-accessors" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a4e819d5d6672b5bc47079c56a6b734f9879471c734dc6c22be4e1b5a781fcef
+  sha256: 17eec08247c61bc0ab8994016e15f1ccc195a7e8b59c57014c45801aaa8d9673
 
 build:
   number: 0
