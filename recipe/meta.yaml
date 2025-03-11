@@ -1,5 +1,5 @@
 {% set name = "sphinx-autosummary-accessors" %}
-{% set version = "2023.4.0" %}
+{% set version = "2025.3.1" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 26f60f44dea2b4b487022921dfba6d773b4529b71afb7069cb97d4ceff0abab9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 41292dffe742703abe987f66c62e109d832490ff74d273d6512503e6066e456f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
 
