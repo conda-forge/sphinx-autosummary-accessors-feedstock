@@ -17,10 +17,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10453&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sphinx-autosummary-accessors-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/sphinx-autosummary-accessors-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/sphinx-autosummary-accessors-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -43,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `sphinx-autosummary-accessors` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install sphinx-autosummary-accessors
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install sphinx-autosummary-accessors
 ```
 
-It is possible to list all of the versions of `sphinx-autosummary-accessors` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add sphinx-autosummary-accessors
+# for installing globally
+pixi global install sphinx-autosummary-accessors
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `sphinx-autosummary-accessors` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search sphinx-autosummary-accessors --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search sphinx-autosummary-accessors --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search sphinx-autosummary-accessors --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +122,8 @@ mamba repoquery whoneeds sphinx-autosummary-accessors --channel conda-forge
 # List dependencies of `sphinx-autosummary-accessors`:
 mamba repoquery depends sphinx-autosummary-accessors --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -149,7 +194,4 @@ Feedstock Maintainers
 
 * [@conda-forge/sphinx](https://github.com/orgs/conda-forge/teams/sphinx/)
 * [@keewis](https://github.com/keewis/)
-
-
-<!-- dummy commit to enable rerendering -->
 
