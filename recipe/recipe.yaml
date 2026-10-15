@@ -1,6 +1,7 @@
 context:
   name: sphinx-autosummary-accessors
-  version: 2025.3.1
+  version: "2026.10.0"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -8,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 41292dffe742703abe987f66c62e109d832490ff74d273d6512503e6066e456f
+  sha256: fec7eebe8f5110e9c2c12a26e9bf098a5b15a26688be2d6151d7c5718daf50c4
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -19,20 +20,20 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=42
-    - setuptools_scm >=3.4
-    - toml
+    - setuptools >=82
+    - setuptools_scm >=8
   run:
-    - importlib-metadata
     - python >=${{ python_min }}
-    - sphinx >=3.3
+    - sphinx >=6
 
 tests:
   - python:
       imports:
         - sphinx_autosummary_accessors
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/xarray-contrib/sphinx-autosummary-accessors
