@@ -1,7 +1,6 @@
 context:
   name: sphinx-autosummary-accessors
   version: "2026.10.0"
-  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
