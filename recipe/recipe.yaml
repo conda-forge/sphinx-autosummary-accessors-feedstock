@@ -1,7 +1,6 @@
 context:
   name: sphinx-autosummary-accessors
   version: "2026.10.0"
-  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -12,7 +11,7 @@ source:
   sha256: fec7eebe8f5110e9c2c12a26e9bf098a5b15a26688be2d6151d7c5718daf50c4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
